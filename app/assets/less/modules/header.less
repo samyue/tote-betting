@@ -1,0 +1,30 @@
+.top-bar-wrapper {
+	@bar-height: 50px;
+
+	height: @bar-height;
+	background-color: @color-tab;
+	.top-bar {
+		.item {
+			width: 145px;
+			line-height: @bar-height;	
+			text-transform: uppercase;
+			text-align: center;
+			float: left;
+			padding: 0 10px;
+			color: white;
+			font-weight: bold;
+			font-size: 12px;
+			cursor: pointer;
+
+
+			&:hover, &.active{
+				background-color: @color-tab-active;
+
+				
+			}
+
+		}
+	}
+
+	
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" ng-app='toteBettingApp' >
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tote Betting</title>
+
+    <link href="assets/vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/less/master.less" rel="stylesheet/less" type="text/css">
+    
+    <!--[if lt IE 9]>
+      <script src="assets/vendor/es5-shim/es5-shim.min.js"></script>
+    <![endif]-->
+    <script src="assets/vendor/modernizr/modernizr.js"></script>
+    <script>
+    less =
+    {
+        env: "development",
+        logLevel: 1,
+        dumpLineNumbers: "comments"
+    };
+    </script>
+    <script src="assets/vendor/less/dist/less-1.7.5.min.js"></script>
+    <!--[if lt IE 9]>
+      <script src="assets/vendor/respondJs/dest/respond.min.js"></script>
+    <![endif]-->
+
+    
+  </head> 
+
+  <body ng-controller="ToteBettingCtrl">
+    <!-- HEADER - START -->
+    <header ng-controller="HeaderCtrl">
+        <div class="top-bar-wrapper">
+            <div class="top-bar middle-container">
+                <div class="item">Tote Betting</div>
+                <div class="item">Help</div>
+            </div>
+            
+        </div>
+        
+
+    </header>
+    <!-- HEADER - END -->
+    
+    <div class="page" ng-controller="PageCtrl">
+        
+        <!-- BET LIST - START -->
+        <div class="bet-list middle-container clearfix" >
+            <div class="heading">
+                Bets:
+            </div>
+            <div class="column col3 xs-col12">
+                <div class="items">
+                    
+                    <div class="item" ng-repeat="bet in bets.wBets">
+                        {{bet}}
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="column col3 xs-col12">
+                <div class="items">
+                    
+                    <div class="item" ng-repeat="bet in bets.pBets">
+                        {{bet}}
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="column col3 xs-col12">
+                <div class="items">
+                    
+                    <div class="item" ng-repeat="bet in bets.eBets">
+                        {{bet}}
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="column col3 xs-col12">
+                <div class="items">
+                    
+                    <div class="item" ng-repeat="bet in bets.qBets">
+                        {{bet}}
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+        <!-- BET LIST - END -->
+
+        <!-- BET RESULTS - START -->
+        <div class="bet-results middle-container clearfix">
+            <div class="heading">Bet Results</div>
+            <div class="results">
+                Results: 
+                <input type="text" ng-model="results" >
+                <div class="notes">(Change results to re-calculate dividends.)</div>
+
+            </div>
+        </div>
+        <!-- BET RESULTS - END -->
+
+        <!-- DIVIDENTS - START -->
+        <div class="dividents middle-container clearfix">
+            <div class="heading">Calculated Dividends</div>
+            <div class="items">
+                
+                <div class="item">
+                    Win – Runner 2 $2.61
+                </div>
+                <div class="item">
+                    Win – Runner 2 $2.61
+                </div>
+                <div class="item">
+                    Win – Runner 2 $2.61
+                </div>
+                <div class="item">
+                    Win – Runner 2 $2.61
+                </div>
+            </div>
+        </div>
+
+        <!-- DIVIDENTS - END -->
+
+        
+    </div>
+
+
+   
+
+
+    <script src="assets/vendor/underscore/underscore-min.js"></script>
+    <script src="assets/vendor/angular/angular.js"></script>
+    <script src="assets/vendor/angular-route/angular-route.js"></script>
+    <script src="assets/vendor/angular-animate/angular-animate.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/controllers.js"></script>
+    <script src="assets/js/services.js"></script>
+    <script src="assets/js/animations.js"></script>
+
+    
+
+  </body>
+</html>
