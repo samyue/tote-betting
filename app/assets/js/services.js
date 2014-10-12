@@ -10,9 +10,7 @@ toteBettingServices.factory('dividentService', function(){
 	var EXACTA_COMMISSION = 0.18;
 	var QUINELLA_COMMISSION = 0.18;
 
-
 	var service = {
-
 
 		convertResults: function(results) {
 			if (typeof results != 'string') {
@@ -52,12 +50,18 @@ toteBettingServices.factory('dividentService', function(){
 					resultRunners.push(resultsArray[0]);
 					break;
 				case 'P':
-					resultRunners.push(resultsArray[place - 1]);
+					if (resultsArray.length >= place ) {
+						resultRunners.push(resultsArray[place - 1]);
+
+					}
 					break;
 				case 'E':
 				case 'Q':
-					resultRunners.push(resultsArray[0]);
-					resultRunners.push(resultsArray[1]);
+					if (resultsArray.length >= 2) {
+						resultRunners.push(resultsArray[0]);
+						resultRunners.push(resultsArray[1]);
+							
+					}
 					break;
 			} 
 			
@@ -148,6 +152,7 @@ toteBettingServices.factory('dividentService', function(){
 				return null;
 			};
 			var resultRunners = this.getResultRunners(resultsArray, product, place);
+			console.log("resultRunners: ", resultRunners);
 			var commission = this.getProductCommission(product);
 			var betObjects = [];
 			var totalStake = 0;
