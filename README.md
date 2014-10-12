@@ -10,4 +10,4 @@ Node.js, NPM and Bower
 - Run `npm start`
 When it is the first time, this command will install required node modules and bower components before starting the web server.
 
-Open http://localhost:8000 in Chrome or other browsers to try this web application.
+Open [http://localhost:8000](http://localhost:8000) in Chrome or other browsers to try this web application.
