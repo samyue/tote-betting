@@ -1,5 +1,4 @@
-tote-betting
-============
+
 
 Tote betting demo web application using Angular.js, LESS, CSS3 and HTML5.
 
